@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Noto Sans", sans-serif !important;
+  background-color: #ffffff;
+}
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea {
+  min-width: 44px !important;
+  min-height: 44px !important;
+}
+
+a,
+p,
+button {
+  font-size: 18px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 4rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #ffffff;
+  color: #f96501;
+  font-weight: 700;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 2.1%;
+}
+
+.headline {
+  display: grid;
+  row-gap: 15px;
+}
+
+.restaurant-container {
+  display: grid;
+  row-gap: 35px;
+  column-gap: 20px;
+}
+
+.footer-row {
+  display: grid;
+  row-gap: 8px;
+}
+
+.placeholder {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  text-transform: capitalize;
+  border-radius: 3px;
+  color: #919191;
+  background-color: #dddddd !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  grid-column: 1 /span 2;
+  word-wrap: break-word;
+}
+
+.restaurant-container .placeholder {
+  grid-column: 1 /span 3;
+}
+
+/* -------------------------------------------- LOADER --------------------------------------------- */
+
+.skeleton-loader,
+.skeleton-img,
+.skeleton-loader-custom {
+  width: 91%;
+  height: 15px;
+  display: block;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 50px 500px;
+  background-position: 0 0;
+  animation: shine 1s infinite;
+  margin: 0 auto 10px auto;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 210px;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.skeleton-loader-custom {
+  width: 65%;
+  margin-left: 16px;
+}
+
+@keyframes shine {
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  margin: 3rem auto 0 auto;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #f96501;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------------- BREAKPOINTS --------------------------------------------- */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 540px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .headline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .restaurant-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-row {
+    grid-template-columns: 60% auto;
+  }
+
+  .lds-ripple {
+    grid-column: 1 /span 2;
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .headline {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .restaurant-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}

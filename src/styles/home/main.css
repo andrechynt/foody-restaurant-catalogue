@@ -1,0 +1,289 @@
+/* -------------------------------------------- JUMBOTRON ---------------------------------------------- */
+
+jumbotron-element,
+headline-element {
+  background-color: #f5f0f0;
+  display: block;
+  position: relative;
+}
+
+jumbotron-element .hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin-top: -80px;
+}
+
+.hero .hero-image {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.hero .shadow-img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-inner {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-inner > h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero-inner .btn-explore {
+  cursor: pointer;
+  padding: 0 1.5rem;
+  border-radius: 3px;
+  color: #ffffff;
+  align-items: center;
+  display: inline-flex;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.btn-explore:hover {
+  background-color: #f96501;
+  border: 2px solid #f96501;
+}
+
+.btn-explore:focus {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+jumbotron-element svg {
+  position: relative;
+  margin-top: -110px;
+}
+
+/* --------------------------------------------- HEADLINE ---------------------------------------------- */
+
+.headline-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.headline-item h2 {
+  color: #f96501;
+}
+
+.headline-item h2,
+.headline-item p {
+  text-align: center;
+}
+
+.headline-item .circle {
+  background-color: #f96501;
+  margin: auto;
+  border-radius: 99em;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+headline-element .waves svg {
+  padding-top: 6%;
+  margin-bottom: -7px;
+}
+
+/* ----------------------------------------------- POST ----------------------------------------------- */
+
+#post {
+  scroll-margin-top: 6.2rem;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.post-title::before {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #f96501;
+  border-radius: 50px;
+  margin: 0 auto 6px auto;
+  display: block;
+}
+
+restaurant-item,
+skeleton-loader {
+  width: 100%;
+  box-shadow: rgba(67, 71, 85, 0.27) 0 0 0.25em,
+    rgba(90, 125, 188, 0.05) 0 0.25em 1em;
+  border-radius: 5px;
+}
+
+restaurant-item .thumbnail {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.thumbnail img {
+  position: absolute;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover .thumbnail img,
+a:focus .thumbnail img {
+  transform: scale(1.2);
+  filter: blur(2px);
+}
+
+.thumbnail .rating {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255 255 255 / 60%);
+  border-radius: 0 0 5px 0;
+  transform: translateX(-80px);
+  transition: all 0.2s;
+  color: #000000;
+  font-size: 16px;
+}
+
+a:hover .thumbnail .rating,
+a:focus .thumbnail .rating {
+  transform: none;
+}
+
+.thumbnail .rating .icon {
+  margin-right: 5px;
+  color: #f96501;
+  font-size: 16px;
+}
+
+restaurant-item .description {
+  padding: 15px;
+}
+
+.description .restaurant-city {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.description .restaurant-city .icon {
+  margin-right: 6px;
+  font-size: 16px;
+  color: #f96501;
+}
+
+.description .restaurant-name {
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.description .restaurant-name .tooltip {
+  position: absolute;
+  background-color: rgb(68, 68, 68, 0.9);
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  top: 100%;
+  left: 20%;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  border-radius: 2px;
+  visibility: hidden;
+  pointer-events: none;
+  cursor: default;
+}
+
+.restaurant-name:hover .tooltip {
+  visibility: visible;
+}
+
+.description .restaurant-desc {
+  color: rgb(143, 143, 143);
+  font-size: 16px;
+}
+
+/* -------------------------------------------- BREAKPOINTS --------------------------------------------- */
+
+@media (max-width: 1024px) {
+  headline-element .container {
+    padding-top: 1.5%;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  jumbotron-element svg {
+    position: relative;
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner > h1 {
+    font-size: 2.5rem;
+  }
+
+  headline-element .container {
+    padding-top: 2.5%;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 536px) {
+  .hero-inner {
+    margin-top: 3%;
+  }
+
+  jumbotron-element svg {
+    margin-top: -200px;
+  }
+
+  headline-element .container {
+    padding-top: 0;
+  }
+
+  #post {
+    scroll-margin-top: 5.8rem;
+  }
+}

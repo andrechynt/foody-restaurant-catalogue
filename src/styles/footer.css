@@ -1,0 +1,57 @@
+/* ---------------------------------------------- FOOTER ----------------------------------------------- */
+
+footer-bar {
+  background-color: rgb(201, 201, 201);
+  padding: 8px 0;
+  display: block;
+}
+
+footer-bar .copyright p {
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+}
+
+footer-bar .copyright p .author {
+  color: #f96501;
+}
+
+footer-bar .copyright,
+footer-bar .sosmed {
+  display: flex;
+  align-items: center;
+}
+
+footer-bar .sosmed {
+  justify-content: right;
+}
+
+footer-bar .sosmed .sosmed-item a {
+  margin-left: 10px;
+  font-size: 30px;
+  color: rgb(102, 102, 102);
+  padding: 2px 10px;
+}
+
+footer-bar .sosmed .sosmed-item a:hover {
+  color: rgb(128, 128, 128);
+}
+
+footer-bar .sosmed .sosmed-item a:focus {
+  color: rgb(102, 102, 102);
+}
+
+/* -------------------------------------------- BREAKPOINTS --------------------------------------------- */
+
+@media (max-width: 500px) {
+  footer-bar .copyright p {
+    text-align: center;
+  }
+
+  footer-bar .sosmed {
+    justify-content: center;
+  }
+
+  footer-bar .sosmed .sosmed-item:nth-child(1) a {
+    margin-left: 0;
+  }
+}

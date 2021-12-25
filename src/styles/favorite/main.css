@@ -1,0 +1,13 @@
+.no-restaurant {
+  text-align: center;
+  grid-column: 1 /span 3 !important;
+}
+
+.no-restaurant .icon-bag {
+  font-size: 10rem;
+  text-align: center;
+}
+
+.no-restaurant h3 {
+  font-size: 1.5rem
+}
