@@ -2,11 +2,8 @@ const assert = require('assert');
 
 Feature('UnFavorited Restaurants');
 
-Before(({ I }) => {
-  I.amOnPage('/');
-});
-
 Scenario('unfavorited a restaurant', async ({ I }) => {
+  I.amOnPage('/');
   I.seeElement('.btn-explore');
   I.click('.btn-explore');
   I.seeElement(locate('restaurant-item').first());
@@ -15,6 +12,7 @@ Scenario('unfavorited a restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
+  I.seeElement('#post');
   I.seeElement('.favorite');
   I.click('.favorite');
 

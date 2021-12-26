@@ -1,6 +1,7 @@
 header {
   padding: 1rem 0;
   position: sticky;
+  position: -webkit-sticky;
   width: 100%;
   top: 0;
   left: 0;
@@ -33,19 +34,14 @@ header.sticky {
 
 .navbar-brand a span{
   color: #ffffff;
-  font-weight: 700;
-  font-size: 25px;
+  font-weight: 900;
+  font-size: 28px;
 }
 
-.navbar-brand .icon-logo {
-  color: #ffffff;
-  font-weight: 700;
+.navbar-brand .o {
   font-size: 25px;
-  margin-right: 8px;
-}
-
-.word-color {
-  color: wheat !important;
+  font-weight: lighter;
+  color: wheat;
 }
 
 .navbar-nav {

@@ -101,17 +101,12 @@ const createDetailRestaurantTemplate = {
         review: review,
       };
 
-      // CHECK ONLINE OR OFFLINE
-      if (window.navigator.onLine) {
-        RestaurantSource.postReviewRestaurant(_data)
-          .then((data) => {
-            this.addNewReview(data[data.length - 1]); // ADD LAST DATA FOR REVIEW CUSTOMER
-            this.updateTotalReview(data.length);
-          })
-          .catch((err) => console.log(err.message));
-      } else {
-        alert('Cant add review, check your connectivity.');
-      }
+      RestaurantSource.postReviewRestaurant(_data)
+        .then((data) => {
+          this.addNewReview(data[data.length - 1]); // ADD LAST DATA FOR REVIEW CUSTOMER
+          this.updateTotalReview(data.length);
+        })
+        .catch((err) => console.log(err.message));
 
       // CLEAR FORM
       document.querySelector('#form-review').reset();
@@ -193,6 +188,15 @@ const renderError = (message, selector) => {
   `;
 };
 
+const createOfflinePageTemplate = (selector) => {
+  selector.innerHTML = `
+    <div class="offline-page mb-3">
+      <i class="icon mb-2 fas fa-plug"></i>
+      <h2>Something is wrong, Check your connectivity !</h2>
+    </div>
+  `;
+};
+
 export {
   createRestaurantTemplate,
   createDetailRestaurantTemplate,
@@ -200,4 +204,5 @@ export {
   Loader,
   renderError,
   noRestaurant,
+  createOfflinePageTemplate,
 };

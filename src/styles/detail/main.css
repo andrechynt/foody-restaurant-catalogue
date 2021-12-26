@@ -390,7 +390,7 @@ other-restaurant .other-restaurant-wrapper .description {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 772px) {
   aside section {
     display: block;
   }
@@ -462,10 +462,6 @@ other-restaurant .other-restaurant-wrapper .description {
 }
 
 @media (max-width: 768px) {
-  other-restaurant .other-restaurant-wrapper {
-    display: block;
-  }
-
   .detail-wrapper {
     display: block;
   }
@@ -478,5 +474,11 @@ other-restaurant .other-restaurant-wrapper .description {
 @media (max-width: 1024px) {
   .detail-wrapper {
     grid-template-columns: 65% auto !important;
+  }
+}
+
+@media (max-width: 990px) {
+  other-restaurant .other-restaurant-wrapper {
+    display: block;
   }
 }

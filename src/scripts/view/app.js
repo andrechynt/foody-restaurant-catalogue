@@ -38,6 +38,7 @@ class App {
 
     // FOR CUSTOM STYLE HEADER IN DIFFERENT PAGES
     if (url === '/favorite' || url === '/detail/:id') {
+      window.scrollTo(0, 0);
       CustomPage._page(this._header, this._btnAbout);
     } else {
       CustomPage._remove(this._header, this._btnAbout);

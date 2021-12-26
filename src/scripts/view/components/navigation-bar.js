@@ -8,7 +8,7 @@ class NavigationBar extends HTMLElement {
       <div class="container navbar">
         <div class="navbar-brand">
           <a href="#/">
-            <i class="icon-logo fas fa-utensils"></i><span>F<span class="word-color">OO</span>DY</span=>
+            <span>F<i class="o fas fa-dot-circle"></i><i class="o fas fa-dot-circle"></i>DY</span>
           </a>
         </div>
         <button class="hamburger-toggle" aria-label="Hamburger Button">

@@ -1,10 +1,7 @@
 Feature('Add Review');
 
-Before(({ I }) => {
-  I.amOnPage('/');
-});
-
 Scenario('add new review', ({ I }) => {
+  I.amOnPage('/');
   I.seeElement('.btn-explore');
   I.click('.btn-explore');
   I.seeElement(locate('restaurant-item').first());
@@ -12,7 +9,8 @@ Scenario('add new review', ({ I }) => {
   const firstRestaurant = locate('.description a').first();
   I.click(firstRestaurant);
 
-  I.scrollTo('.add-review');
+  I.seeElement('#post');
+  I.seeElement('.add-review');
   I.seeElement('#name');
   I.fillField('name', 'Juleha');
   I.seeElement('#review-content');

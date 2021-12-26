@@ -2,17 +2,12 @@ const assert = require('assert');
 
 Feature('Favorited Restaurants');
 
-Before(({ I }) => {
-  I.amOnPage('/#/favorite');
-});
-
 Scenario('showing empty restaurant', ({ I }) => {
+  I.amOnPage('/#/favorite');
   I.seeElement('.no-restaurant');
 });
 
 Scenario('favorited one restaurant', async ({ I }) => {
-  I.seeElement('.no-restaurant');
-
   I.amOnPage('/');
   I.seeElement('.btn-explore');
   I.click('.btn-explore');
@@ -22,6 +17,7 @@ Scenario('favorited one restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
+  I.seeElement('#post');
   I.seeElement('.favorite');
   I.click('.favorite');
 
