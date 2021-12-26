@@ -16,4 +16,5 @@ Scenario('add new review', ({ I }) => {
   I.seeElement('#review-content');
   I.fillField('review-content', 'wkwkwkkwkwkkwk');
   I.click('Add Review');
+  I.seeElement(locate('review-element').last());
 });

@@ -35,6 +35,7 @@ class App {
 
     this._content.innerHTML = page.render();
     page.afterRender();
+    CustomPage._skipContent();
 
     // FOR CUSTOM STYLE HEADER IN DIFFERENT PAGES
     if (url === '/favorite' || url === '/detail/:id') {
@@ -43,8 +44,6 @@ class App {
     } else {
       CustomPage._remove(this._header, this._btnAbout);
     }
-
-    CustomPage._skipContent();
   }
 }
 
