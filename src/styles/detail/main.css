@@ -17,7 +17,7 @@
 
 .detail-img {
   width: 100%;
-  height: 400px;
+  height: 450px;
   overflow: hidden;
   border-radius: 3px 3px 0 0;
   position: relative;
@@ -219,7 +219,7 @@
   box-shadow: #f96501 0 0 0 1px;
   border-radius: 3px;
   padding: 15px;
-  word-break:break-all;
+  word-break: break-all;
   word-wrap: break-word;
   overflow: hidden;
   width: 100%;
@@ -385,19 +385,9 @@ other-restaurant .other-restaurant-wrapper .description {
   }
 }
 
-@media (min-width: 768px) {
-  aside section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (min-width: 772px) {
   aside section {
     display: block;
-  }
-
-  other-restaurant .other-restaurant-wrapper .thumbnail {
-    height: 130px;
   }
 
   other-restaurant .other-restaurant-wrapper {
@@ -406,6 +396,18 @@ other-restaurant .other-restaurant-wrapper .description {
 
   .card-review {
     margin-bottom: 4rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  aside section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  other-restaurant .other-restaurant-wrapper .thumbnail {
+    height: 130px;
   }
 }
 
@@ -422,7 +424,7 @@ other-restaurant .other-restaurant-wrapper .description {
 
 @media (max-width: 500px) {
   .detail-img {
-    height: 330px;
+    height: 250px !important;
   }
 }
 
@@ -437,7 +439,7 @@ other-restaurant .other-restaurant-wrapper .description {
   }
 
   .detail-name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .menu-category {
@@ -462,6 +464,12 @@ other-restaurant .other-restaurant-wrapper .description {
   }
 }
 
+@media (max-width: 700px) {
+  .detail-img {
+    height: 365px;
+  }
+}
+
 @media (max-width: 768px) {
   .detail-wrapper {
     display: block;
@@ -470,16 +478,20 @@ other-restaurant .other-restaurant-wrapper .description {
   other-restaurant .other-restaurant-wrapper .thumbnail {
     max-width: 100% !important;
   }
-}
 
-@media (max-width: 1024px) {
-  .detail-wrapper {
-    grid-template-columns: 65% auto !important;
+  other-restaurant .other-restaurant-wrapper {
+    display: block;
   }
 }
 
-@media (max-width: 990px) {
+@media (min-width: 800px) and (max-width: 1000px) {
   other-restaurant .other-restaurant-wrapper {
     display: block;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  other-restaurant .other-restaurant-wrapper .thumbnail {
+    height: 150px;
   }
 }

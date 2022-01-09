@@ -61,6 +61,7 @@ const createDetailRestaurantTemplate = {
     aside.innerHTML = '<h3 class="other-title mb-2">Related Restaurant</h3>';
 
     const wrapperList = document.createElement('section');
+    wrapperList.classList.add('sticky');
 
     result.filter((data) => {
       if (data.city === detailCity) {

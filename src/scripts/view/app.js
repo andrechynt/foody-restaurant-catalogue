@@ -25,13 +25,14 @@ class App {
   }
 
   scrollPage() {
-    this._header.classList.toggle('sticky', window.scrollY > 0);
+    this._header.classList.toggle('fixed-top', window.scrollY > 0);
     this._btnAbout.classList.toggle('show', window.scrollY > 0);
   }
 
   renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = Route[url];
+    const breakpointsForMobile = window.matchMedia('(max-width: 540px)');
 
     this._content.innerHTML = page.render();
     page.afterRender();
@@ -39,7 +40,10 @@ class App {
 
     // FOR CUSTOM STYLE HEADER IN DIFFERENT PAGES
     if (url === '/favorite' || url === '/detail/:id') {
-      window.scrollTo(0, 0);
+      if (breakpointsForMobile.matches) {
+        window.scrollTo(0, 0);
+      }
+
       CustomPage._page(this._header, this._btnAbout);
     } else {
       CustomPage._remove(this._header, this._btnAbout);

@@ -1,7 +1,6 @@
 header {
   padding: 1rem 0;
-  position: sticky;
-  position: -webkit-sticky;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -9,7 +8,8 @@ header {
   transition: all 0.5s;
 }
 
-header.sticky {
+header.fixed-top {
+  position: fixed;
   background-color: #f96501;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
@@ -32,7 +32,7 @@ header.sticky {
   align-items: center;
 }
 
-.navbar-brand a span{
+.navbar-brand a span {
   color: #ffffff;
   font-weight: 900;
   font-size: 28px;
@@ -172,7 +172,7 @@ header.sticky {
     height: 2px;
     left: 50%;
     bottom: 0;
-    transform: translateX(77%);
+    transform: translateX(78%);
     background-color: white;
     transition: all ease-in-out 0.2s;
   }

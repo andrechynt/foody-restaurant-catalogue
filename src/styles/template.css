@@ -46,6 +46,12 @@ button {
   padding: 0 15px;
 }
 
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 6rem;
+}
+
 .mb-1 {
   margin-bottom: 0.5rem !important;
 }
@@ -114,12 +120,12 @@ button {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  grid-column: 1 /span 2;
+  grid-column: 1 / span 2;
   word-wrap: break-word;
 }
 
 .restaurant-container .placeholder {
-  grid-column: 1 /span 3;
+  grid-column: 1 / span 3;
 }
 
 .offline-page {
@@ -146,9 +152,15 @@ button {
 }
 
 @keyframes animIcon {
-  0% {transform: rotate(-20deg);}
-  50% {transform: rotate(20deg);}
-  to {transform: rotate(-20deg);}
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(-20deg);
+  }
 }
 
 /* -------------------------------------------- LOADER --------------------------------------------- */
@@ -248,7 +260,7 @@ button {
   }
 
   .lds-ripple {
-    grid-column: 1 /span 2;
+    grid-column: 1 / span 2;
     display: flex;
     margin: 1.5rem auto 0 auto;
   }
