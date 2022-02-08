@@ -26,6 +26,7 @@ const app = new App({
   header: document.querySelector('header'),
   button: document.querySelector('.hamburger-toggle'),
   drawer: document.querySelector('.navbar-nav'),
+  backdrop: document.querySelector('.backdrop-nav'),
   content: document.querySelector('main'),
   btnAbout: document.querySelector('.btn-about'),
   navbar: document.querySelectorAll('.navbar-nav a'),

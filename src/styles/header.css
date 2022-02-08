@@ -114,8 +114,8 @@ header.fixed-top {
     right: -1500px;
     width: 55%;
     height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
     padding: 75px 30px;
+    border: 1px solid rgba(0,0,0,.2);
     -webkit-font-smoothing: antialiased;
     transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   }
@@ -161,6 +161,22 @@ header.fixed-top {
   .hamburger-toggle.show .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
     background-color: #000000;
+  }
+
+  .backdrop-nav {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    margin-top: -12px;
+  }
+
+  .backdrop-nav.show {
+    display: block;
   }
 }
 

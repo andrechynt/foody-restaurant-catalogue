@@ -5,11 +5,12 @@ import CustomPage from '../utils/custom-page';
 
 class App {
   constructor({
-    header, button, drawer, content, btnAbout, navbar,
+    header, button, drawer, backdrop, content, btnAbout, navbar,
   }) {
     this._header = header;
     this._button = button;
     this._drawer = drawer;
+    this._backdrop = backdrop;
     this._content = content;
     this._btnAbout = btnAbout;
     this._navbar = navbar;
@@ -19,7 +20,7 @@ class App {
     Drawer.init({
       button: this._button,
       drawer: this._drawer,
-      content: this._content,
+      backdrop: this._backdrop,
       navLink: this._navbar,
     });
   }

@@ -109,7 +109,7 @@ headline-element .waves svg {
 /* ----------------------------------------------- POST ----------------------------------------------- */
 
 #post {
-  scroll-margin-top: 6.2rem;
+  scroll-margin-top: 11rem;
 }
 
 .post-title {
@@ -282,8 +282,10 @@ restaurant-item .description {
   headline-element .container {
     padding-top: 0;
   }
+}
 
+@media (max-width: 540px) {
   #post {
-    scroll-margin-top: 5.8rem;
+    scroll-margin-top: 10rem;
   }
 }

@@ -16,6 +16,7 @@ class NavigationBar extends HTMLElement {
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
+        <div class="backdrop-nav"></div>
         <div class="navbar-nav">
           <a href="#/home" class="nav-item">Home</a>
           <a href="#/favorite" class="nav-item">Favorite</a>
